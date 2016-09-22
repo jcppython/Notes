@@ -1,7 +1,13 @@
 # Notes
-sync with Gitbook
+sync with [Gitbook](https://jcppython.gitbooks.io/notes/content/)
 
 欢迎指正……
+
+
 踩过的坑……
+
+
 流过的泪……
+
+
 分号分号……
