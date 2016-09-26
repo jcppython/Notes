@@ -125,6 +125,34 @@ class BankRegisteAccount : public BankService {}
 
 
 
+个人理解
+
+
+
+hook方法，回调方法，std::function，函数指针 等都是提供了一个 『在已定框架下, 修改其中某处动作的实际逻辑的机会』
+
+
+
+```c++
+// 某个逻辑流程，特定的
+void process ()
+{
+    func1();
+    func2();
+    ... ...
+    funcN();
+}
+```
+
+上述流程是特定的，但是每个函数具体做什么呢?
+
+1.  常规函数，既定的，运行时不可变
+2.  多态的，OO语言提供的一种运行时变化机制
+3.  函数指针(hook, 回调)等，可以用最小的代价，改变该函数的实际动作
+4.  ​
+
+
+
 ## 参考:
 
 http://blog.csdn.net/hguisu/article/details/7564039
