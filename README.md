@@ -6,7 +6,7 @@ sync with [Gitbook](https://jcppython.gitbooks.io/notes/content/)
 - 流过的泪……
 - 分号分号……
 
-# 目前关注
+# 我所感兴趣的 (它对我没兴趣……)
 - 语言 (排序有先后)
     - C++
     - PHP
@@ -20,3 +20,4 @@ sync with [Gitbook](https://jcppython.gitbooks.io/notes/content/)
 
 - 进阶技术
     - 分布式
+    - 机器学习
