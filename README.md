@@ -13,11 +13,12 @@ sync with [Gitbook](https://jcppython.gitbooks.io/notes/content/)
     - Shell
     - GO
     - Python
+    - Java
 
 - 基础技术
     - OS
     - 数据结构及算法
 
 - 进阶技术
-    - 分布式
+    - 分布式(存储&计算)
     - 机器学习

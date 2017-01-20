@@ -2,49 +2,27 @@
 
 
 
-## 场景
+## 1. 场景
 
-我们知道一个算法所需的关键步骤(框架), 并确定了这些步骤的执行顺序。 但是某些步骤的具体实现是未知的, 或者说某些步骤的实现与具体的环境相关.
-
-
-
-如何保证架构逻辑的正常执行，而不被子类破坏 ？
+已知一个算法的框架(所需的关键步骤)，并确定这些步骤的执行顺序，但是某些步骤的具体实现是未知的，或者说某些步骤的实现与具体的环境相关。
 
 
 
-## 例子-去银行办理业务
-
-```c++
-// 去银行办理业务
-void bank_service()
-{
-    // 取号排队
-    int num = get_number();
-    // 办理具体业务 - 具体行为待定
-    // ServiceType& type
-    receive_service(type);
-    // 对银行工作人员进行评分 - 具体行为待定
-    score_worker()
-}
-```
+总结起来就是: 步骤框架已知，某些步骤的具体实现需要延后
 
 
 
-## 模板方法模式
-
-定义一个操作中的算法的骨架，而将一些步骤延迟到子类中, 模板方法使得子类可以不改变一个算法的结构即可重定义该算法的某些特定步骤
-
-(Template Method Pattern:Definethe skeleton of an algorithm in an operation,deferring some steps tosubclasses.Template Methodletssubclasses redefine certain steps of an algorithmwithoutchanging the algorithm's structure)
+如何保证架构逻辑的正常执行，而不被后续具体步骤实现所破坏 ？
 
 
 
-A **TemplateMethod** is a Method in an (abstract) base class which calls one or more HookMethods to fulfill parts of its tasks.
+## 2. 模板方法模式
 
-TemplateMethod是基类中的方法，该方法调用若干个 HookMethods 完成其任务
+### 2.1 定义
 
+**Template Method Pattern**: Definethe skeleton of an algorithm in an operation, deferring some steps to subclasses. Template Method lets subclasses redefine certain steps of an algorithm without changing the algorithm's structure.
 
-
-TemplateMethod和HookMethod是**模板方法模式**(TemplateMethodPattern)的一部分
+定义一个操作中的算法的骨架，而将一些步骤延迟到子类中，模板方法使得子类可以不改变一个算法的结构即可重定义该算法的某些特定步骤
 
 
 
@@ -54,7 +32,8 @@ TemplateMethod和HookMethod是**模板方法模式**(TemplateMethodPattern)的�
 
 
 
-### 具体来说
+
+### 2.2 具体来说
 
 -   基类抽象实现不变部分&公共部分, 将可变部分(行为)留给子类去实现
 -   基类负责形式化地定义算法, 子类实现细节的处理
@@ -63,7 +42,14 @@ TemplateMethod和HookMethod是**模板方法模式**(TemplateMethodPattern)的�
 
 
 
-### 钩子方法
+
+### 2.3 两类方法
+
+TemplateMethod是基类中的方法，该方法调用若干个 HookMethods 完成其任务
+
+TemplateMethod和HookMethod是**模板方法模式**(TemplateMethod Pattern)的两部分
+
+
 
 -   钩子方法的引入使得子类可以控制父类的行为。
 -   最简单的钩子方法就是空方法, 也可以在钩子方法中定义一个默认的实现, 如果子类不覆盖钩子方法, 则执行父类的默认实现代码
@@ -71,7 +57,9 @@ TemplateMethod和HookMethod是**模板方法模式**(TemplateMethodPattern)的�
 
 
 
-### 实现
+
+
+## 3. 示例
 
 ```c++
 class BankService {
@@ -117,7 +105,6 @@ private:
 
 };
 
-
 class BankTakeMoney : public BankService {}
 class BankRegisteAccount : public BankService {}
 // ...
@@ -125,7 +112,7 @@ class BankRegisteAccount : public BankService {}
 
 
 
-个人理解
+#### 4. 个人理解
 
 
 
