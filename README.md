@@ -22,3 +22,12 @@ sync with [Gitbook](https://jcppython.gitbooks.io/notes/content/)
 - 进阶技术
     - 分布式(存储&计算)
     - 机器学习
+
+
+
+
+
+
+**®声明: 个人笔记，多数内容整理自网络，未规范标注出处，如有冒犯，请联系处理**
+
+​             **内容有误，如有耽误，烦请见谅**
