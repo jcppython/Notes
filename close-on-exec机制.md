@@ -117,3 +117,9 @@ int main(int argc, char *argv[])
 ref
 
 http://blog.csdn.net/chrisniu1984/article/details/7050663
+
+
+
+**®声明: 个人笔记，多数内容整理自网络，未规范标注出处，如有冒犯，请联系处理**
+
+​             **内容有误，如有耽误，烦请见谅**
