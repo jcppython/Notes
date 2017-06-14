@@ -83,6 +83,7 @@ st.txt: No such file or directory
 # 將 stderr 導進 stdout 或將 stdout 導進 sterr
 2>&1 就是將 stderr 併進 stdout 作輸出
 1>&2 或 >&2 就是將 stdout 併進 stderr 作輸出 
+下面这条命令，1>out 2>&1 顺序都不能错，why?
 17:08:43 › ls test.txt no.test.txt 1>out 2>&1
 ```
 
