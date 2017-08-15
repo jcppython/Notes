@@ -99,6 +99,11 @@ int main()
 
 
 
+使用C++ class时，使用一般的函数指针做回调会很有局限性
+
+-   仅能使用static函数做回调
+-   仅能使用static成员变量
+
 
 
 以上内容摘自: http://www.jellythink.com/archives/771
