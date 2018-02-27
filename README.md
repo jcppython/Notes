@@ -23,7 +23,11 @@ sync with [Gitbook](https://jcppython.gitbooks.io/notes/content/)
     - 分布式(存储&计算)
     - 机器学习
 
+- 应该掌握的
+    - 爬虫(机器浏览器用户)
 
+- 热门名词
+    - 区块链
 
 
 做事是本能，不做需要大智慧，把握好做和不做的分寸，是为进退有据

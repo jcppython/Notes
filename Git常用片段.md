@@ -21,17 +21,62 @@ git branch -d|-D branch_name
 git branch -m|-M branch_name new_name
 ```
 
-##### git-rebase
-
-git rebase用于把一个分支的修改合并到当前分支
 
 
+#### 本地修改后同步远程仓库
 
-##### 分支移动到某次提交
+git pull = git fetch + git merge
+git pull --rebase = git fetch + git rebase
 
-```sh
+
+
+>   问题背景
+
+你从远端库clone到本地，一段时间后 origin/master 向前走了很多, 本地master修改完，需要与远端的再合并一次
+
+下面origin相当于origin/master, mywork相当于本地的master
+
+
+
+当origin处于C2时，创建了自己的分支mywork，一段时间后，处于下面的状态
+
+![](./assets/git_rebase0.jpg)
+
+##### 1. git merge的方法
 
 ```
+git pull 等同于 git fetch && git merge origin
+```
+
+1. 把远程的origin修改拉到本地
+2. 自动与远端修改合并
+
+![](./assets/git_rebase1.jpg)
+
+##### 2. git rebase方法
+
+```
+git fetch
+git rebase origin
+```
+
+1.  将远程的origin分支修改拉到本地 （如果需要）
+2.  将mywork分支的commit取消，临时存为patch，然后把mywork更新为最新的origin，再把patch应用进去
+
+git历史会更干净
+
+![](./assets/git_rebase2.jpg)
+
+
+
+在rebase的过程中，也许会出现冲突(conflict)
+
+1.  有冲突，rebase会马上停止，解决冲突后执行 git rebase --continue
+2.  这个过程中，可以随时 git rebase —abort 终止rebase行动，并mywork回到初始状态
+
+##### git pull –-rebase
+
+也就是将get merge origin/master替换成了git rebase origin/master
 
 
 
