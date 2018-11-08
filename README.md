@@ -22,8 +22,9 @@ sync with [Gitbook](https://jcppython.gitbooks.io/notes/content/)
 - 进阶技术
     - 分布式(存储&计算)
     - 机器学习
+    - 流式计算
 
-- 应该掌握的
+- 需要懂点儿的
     - 爬虫(机器浏览器用户)
 
 - 热门名词
